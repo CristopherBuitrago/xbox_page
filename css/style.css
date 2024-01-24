@@ -69,6 +69,8 @@ section {
     padding: 20px;
 }
 
+ /* image box, ayuda de como hacer la sombra radiante: https://www.youtube.com/watch?v=-VOUK-xFAyk  */
+
 .image-box {
     flex: 1 1 33.333%;
     margin-bottom: 20px;
