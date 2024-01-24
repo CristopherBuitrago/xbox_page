@@ -1,56 +1,140 @@
-*{
-    padding: 0px;
-    margin: 0px;
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    width: 1024px;
-    height: 1500px;
-    border: 1px solid grey;
-    margin: 0px auto;
-    margin-top: 30px;
-    display: block;
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+/* Estilos del header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
 
-#left-header, #right-header{
-    float: left;
-    margin: 5px;
-    width: 49%;
-    height: 100%;
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.Logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estilos de las secciones */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.image-box {
+    flex: 1 1 33.333%;
+    margin-bottom: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.text-box {
+    flex: 1 1 66.667%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-box h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Align the copyright to the bottom */
+}
+
+/* Footer content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.footer-group {
+    flex: 1 1 33.33%;
+    margin-bottom: 10px;
+}
+
+.footer-link {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: blueviolet;
 }
 
-#right-header{
-    float: right;
+  /* Copyright */
+.copyright {
+    width: 30%;
+    text-align: right;
+    margin-top: 20px; /* Add some margin to separate it from the content */
 }
 
-#main{
-    width: 99%;
-    padding-bottom: 70%;
-    margin: 5px;
-    background: orange;
-    float: left;
-}
-
-#articles article{
-    justify-content: center;
-    width: 22%;
-    margin: 8px;
-    float:  left;
-    padding: 50px;
-    background: blue;
-}
-
-#footers footer{
-    float: left;
-    margin: 10px;
-    width: 98%;
-    height: 100%;
-    padding-bottom: 6%;
-    background: grey;
+  /* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+        .footer-content {
+        width: 100%;
+    }
+    
+    .footer-group {
+        flex: 1 1 100%;
+    }
+    
+    .copyright {
+        width: 100%;
+        text-align: justify;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
 }
