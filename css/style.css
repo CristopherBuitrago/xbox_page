@@ -1,4 +1,8 @@
 /* Estilos generales */
+html{
+    background-color: whitesmoke;
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -19,15 +23,20 @@ ul {
 /* Estilos del header */
 header {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #111a;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
 }
 
 .Logo {
     display: flex;
     align-items: center;
+    box-shadow: -5px 0px 10px #111a ;
+}
+
+.Logo:active{
+    box-shadow: 0px 0px 5px #111a inset;
 }
 
 .Logo img {
@@ -63,7 +72,47 @@ section {
 .image-box {
     flex: 1 1 33.333%;
     margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
 }
+
+.image-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(20px);
+}
+
+.image-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: glow 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes glow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 .image-box img {
     width: 100%;
@@ -118,10 +167,10 @@ footer {
 .copyright {
     width: 30%;
     text-align: right;
-    margin-top: 20px; /* Add some margin to separate it from the content */
+    margin-top: 20px; /* Agregar un margen de 20 px para separarlo del contenido */
 }
 
-  /* Adjust the layout for smaller screens */
+  /* Ajustar la disposicion segun pantallas */
 @media (max-width: 768px) {
         .footer-content {
         width: 100%;
