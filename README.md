@@ -83,7 +83,7 @@ Contributions are what make the open source community such an amazing place to l
 
 ## Link
 
-Visit the live project [here](https://cristopherbuitrago.github.io/exercise-responsive-github.io/).
+Visit the live project [here](https://cristopherbuitrago.github.io/xbox_page/).
 
 ---
 
