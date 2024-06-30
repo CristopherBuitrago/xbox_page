@@ -84,6 +84,7 @@ Contributions are what make the open source community such an amazing place to l
 ## Link
 
 Visit the live project [here](https://cristopherbuitrago.github.io/xbox_page/).
+Visit the deploy page: **https://xbox-page.netlify.app**
 
 ---
 
